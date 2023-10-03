@@ -1,0 +1,18 @@
+extends ../layout/index
+
+block contenido 
+    h1(class="text-5xl font-black text-center text-red-900 uppercase")= title
+
+    div(class="flex justify-evenly mt-11")
+        a(href='/inicio' class="uppercase p-3 text-white bg-red-600 text-3xl font-bold rounded-md hover:bg-red-700 transition-all") Ir a Inicio
+        a(href='/consulta' class="uppercase p-3 text-white bg-red-600 text-3xl font-bold rounded-md hover:bg-red-700 transition-all") Volver a consultar
+
+    ul(class="grid grid-cols-4 mt-20 gap-4 mb-11")
+        each earthquake in earthquakes
+            li(class="p-3 bg-white rounded-md shadow-md text-lg")
+                strong Magnitud: #{earthquake.properties.mag}
+                br
+                span Ubicación: #{earthquake.properties.place}
+                br
+                span Fecha y hora: #{new Date(earthquake.properties.time).toLocaleString()}
+    

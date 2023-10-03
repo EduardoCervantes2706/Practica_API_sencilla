@@ -1,0 +1,10 @@
+extends ../layout/index
+
+block contenido 
+    h1(class="uppercase text-center text-5xl font-black mb-10") Cervantes Jaramillo Luis Eduardo
+    h2(class="text-4xl font-black text-center text-red-900 uppercase")= title
+    div(class="mt-20") 
+        p(class="text-center text-3xl font-semibold") Esta práctica consulta datos de una API y los muestra al usuario, además de subir este proyecto a un contenedor Docker.
+
+        div(class="flex justify-center mt-20") 
+            a(href="/consulta" class="uppercase p-3 text-white bg-red-600 text-4xl font-bold rounded-md hover:bg-red-700 transition-all") Consultar datos 
